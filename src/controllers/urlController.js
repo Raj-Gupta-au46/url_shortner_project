@@ -22,6 +22,12 @@ async function handleGenerateNewShortURL(req, res) {
     return res.status(400).json({ error: "url is required" });
   }
 
+  const isValidURL = isValidUrl(body.url);
+  if (!isValidURL) {
+    logger.error("Invalid URL");
+    return res.status(400).json({ error: "Invalid URL" });
+  }
+
   const shortID = shortid();
 
   try {
@@ -55,6 +61,15 @@ async function handleGetAnalytics(req, res) {
   } catch (error) {
     logger.error(`Error fetching analytics: ${error.message}`);
     return res.status(500).json({ error: "Internal Server Error" });
+  }
+}
+
+function isValidUrl(url) {
+  try {
+    new URL(url);
+    return true;
+  } catch (error) {
+    return false;
   }
 }
 
