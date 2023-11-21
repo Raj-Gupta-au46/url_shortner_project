@@ -15,20 +15,28 @@ app.use(express.json());
 app.use("/url", urlRoute);
 
 app.get("/:shortId", async (req, res) => {
-  const shortId = req.params.shortId;
-  const entry = await URL.findOneAndUpdate(
-    {
-      shortId,
-    },
-    {
-      $push: {
-        visitHistory: {
-          timestamp: Date.now(),
-        },
+  try {
+    const shortId = req.params.shortId;
+    const ipAddress = req.ip || req.connection.remoteAddress;
+    const userAgent = req.get("user-agent");
+    const entry = await URL.findOneAndUpdate(
+      {
+        shortId,
       },
-    }
-  );
-  res.redirect(entry.redirectURL);
+      {
+        $push: {
+          visitHistory: {
+            timestamp: Date.now(),
+            ipAddress,
+            userAgent,
+          },
+        },
+      }
+    );
+    res.redirect(entry.redirectURL);
+  } catch (error) {
+    res.send(error);
+  }
 });
 
 app.listen(PORT, () => console.log(`Server Started at PORT:${PORT}`));
