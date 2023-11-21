@@ -50,6 +50,12 @@ Error Response structure
 
 ## Response samples Url shorten response
 
-```
-{ "data": { "longUrl": "http://www.abc.com/oneofthelongesturlseverseenbyhumans.com", "shortUrl": "http://localhost:3000/ghfgfg", "urlCode": "ghfgfg" } }
+```json
+{
+  "data": {
+    "longUrl": "http://www.abc.com/oneofthelongesturlseverseenbyhumans.com",
+    "shortUrl": "http://localhost:3000/ghfgfg",
+    "urlCode": "ghfgfg"
+  }
+}
 ```
