@@ -30,12 +30,10 @@ const generateUrl = async function (req, res) {
     const { longUrl } = req.body;
 
     if (!isValidRequestBody(req.body)) {
-      return res
-        .status(400)
-        .send({
-          status: false,
-          message: "Invalid request parameters. Please provide long URL",
-        });
+      return res.status(400).send({
+        status: false,
+        message: "Invalid request parameters. Please provide long URL",
+      });
     }
 
     if (!isValid(longUrl)) {
@@ -46,24 +44,20 @@ const generateUrl = async function (req, res) {
 
     // Check if the long URL is valid
     if (!isUrlValid(longUrl)) {
-      return res
-        .status(400)
-        .send({
-          status: false,
-          message: "longUrl is not valid. Please provide a valid URL",
-        });
+      return res.status(400).send({
+        status: false,
+        message: "longUrl is not valid. Please provide a valid URL",
+      });
     }
 
     let cachedUrlData = await GET_ASYNC(`${longUrl}`);
     if (cachedUrlData) {
       const urlDetails = JSON.parse(cachedUrlData);
-      return res
-        .status(200)
-        .send({
-          status: true,
-          data: urlDetails,
-          msg: "URL is coming from Cache",
-        });
+      return res.status(200).send({
+        status: true,
+        data: urlDetails,
+        msg: "URL is coming from Cache",
+      });
     }
 
     let myUrl = longUrl;
