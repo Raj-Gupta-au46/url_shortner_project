@@ -40,7 +40,7 @@ async function handleGenerateNewShortURL(req, res) {
     logger.info(
       `Short URL generated: ${shortID}, Original URL: ${body.url}, IP Address: ${ipAddress}, User Agent: ${userAgent}`
     );
-    return res.json({ id: shortID });
+    return res.status(200).json({ id: shortID });
   } catch (error) {
     logger.error(`Error generating short URL: ${error.message}`);
     return res.status(500).json({ error: "Internal Server Error" });
@@ -66,8 +66,9 @@ async function handleGetAnalytics(req, res) {
 
 function isValidUrl(url) {
   try {
-    new URL(url);
-    return true;
+    let regex = /^(http?|ftp):\/\/[^\s\/$.?#].[^\s]*$/;
+
+    return regex.test(url);
   } catch (error) {
     return false;
   }

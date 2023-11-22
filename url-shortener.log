@@ -1,0 +1,24 @@
+{"level":"error","message":"Invalid URL","timestamp":"2023-11-22T06:27:44.092Z"}
+{"level":"error","message":"Invalid URL","timestamp":"2023-11-22T06:29:11.140Z"}
+{"level":"error","message":"Invalid URL","timestamp":"2023-11-22T06:30:30.680Z"}
+{"level":"error","message":"Invalid URL","timestamp":"2023-11-22T06:31:09.354Z"}
+{"level":"error","message":"Error generating short URL: url validation failed: visitHistory.0.ipAddress: Path `ipAddress` is required.","timestamp":"2023-11-22T06:35:55.027Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T06:37:22.481Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T06:41:54.094Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T06:45:51.347Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T06:47:09.461Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T06:52:33.811Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T06:53:32.703Z"}
+{"level":"info","message":"Short URL generated: zLgqeyh-v, Original URL: http://www.example.com, IP Address: 107.0.0.1, User Agent: User-Agent","timestamp":"2023-11-22T06:54:55.531Z"}
+{"level":"info","message":"Short URL generated: XdxgfcBKH, Original URL: http://www.example.com, IP Address: 107.0.0.1, User Agent: User-Agent","timestamp":"2023-11-22T06:55:30.313Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T06:56:30.347Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T06:59:15.767Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T07:00:13.819Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T07:00:58.157Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T07:01:46.901Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T07:13:55.132Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T07:14:44.696Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T07:14:54.696Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T07:15:12.504Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T07:16:06.186Z"}
+{"level":"error","message":"Error generating short URL: Operation `urls.insertOne()` buffering timed out after 10000ms","timestamp":"2023-11-22T07:26:44.519Z"}
